@@ -1,5 +1,5 @@
 <script>
-    //Problema: Inversão de Número
+    //Problema: Inversão de Número usando while
     /*
     Escreva um programa que peça ao usuário um número e inverta sua ordem usando uma estrutura de repetição while.
     Exemplo:
@@ -7,12 +7,17 @@
     Saída: 54321
     */
 
-    //ENTRADA
+    // ENTRADA
+    let entrada = prompt("Insira uma sequência de números");
 
+    // PROCESSAMENTO
+    let saida = "";
+    let i = entrada.length - 1;
+    while (i >= 0) {
+        saida += entrada[i];
+        i--;
+    }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    // SAÍDA
+    alert(saida);
 </script>

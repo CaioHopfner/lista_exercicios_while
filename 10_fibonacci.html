@@ -5,11 +5,26 @@
     */
 
     //ENTRADA
-
+    let numeroPrimeiro = 0
+    let numeroSegundo = 1
+    let soma = 0
+    const pergunta = Number(prompt("Quantos números da sequencia Fibonacci você deseja receber?"))
+    let numerosDaSequencia = []
 
     //PROCESSAMENTO
+    if (pergunta >= 1) {numerosDaSequencia.push(numeroPrimeiro)}
+    if (pergunta >= 2) {numerosDaSequencia.push(numeroSegundo)}
+    let i = 2
+    while (i < pergunta) {
+        i++
+        soma = numeroPrimeiro + numeroSegundo
+        numeroPrimeiro = numeroSegundo
+        numeroSegundo = soma
+        numerosDaSequencia.push(soma)
+    }
 
 
     //SAÍDA
+    document.write(`Os ${pergunta} primeiros números da sequencia de Fibonnaci são: <br> ${numerosDaSequencia.join(`<br>`)}`)
     
 </script>

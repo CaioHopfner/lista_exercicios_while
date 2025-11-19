@@ -3,13 +3,20 @@
     /*
     Peça para o usuário inserir números sucessivamente e some - os.O programa para quando o usuário inserir 0 e então exibe a soma total.
     */
-    
+
     //ENTRADA
 
+    let soma = 0
+    let numero = 0
 
     //PROCESSAMENTO
+    do {
+        numero =Number(prompt("Insira um número inteiro para somar"))
+        soma += numero
+    } while (numero != 0)
 
 
     //SAÍDA
+    alert("A soma dos numeros é: " + soma)
     
 </script>

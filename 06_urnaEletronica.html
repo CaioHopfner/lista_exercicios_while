@@ -20,11 +20,48 @@
     */
 
     //ENTRADA
-
+    let totalVotos = 0
+    let joaozinho = 0
+    let mariazinha = 0
+    let nulo = 0
+    let branco = 0
+    let voto = Number(prompt("As opções são: \n1. Candidato Joãozinho \n2. Candidato Mariazinha \n3. Nulo \n4. Branco \nEntre com o seu voto:"))
 
     //PROCESSAMENTO
-
-
+    while (voto != 0) {
+        totalVotos++
+        if (voto == 1) {
+            joaozinho++
+        } else if (voto == 2) {
+            mariazinha++
+        } else if (voto == 3) {
+            nulo++
+        } else if (voto == 4) {
+            branco++
+        }
+        voto = Number(prompt("As opções são: \n1. Candidato Joãozinho \n2. Candidato Mariazinha \n3. Nulo \n4. Branco \nEntre com o seu voto:"))
+    }
+    let porcentagemJoao = (joaozinho / totalVotos) * 100
+    let porcentagemMaria = (mariazinha / totalVotos) * 100
+    let porcentagemNulo = (nulo / totalVotos) * 100
+    let porcentagemBranco = (branco / totalVotos) * 100
+    let votosPessoas = joaozinho + mariazinha
+    alert(`O total de votos foi: ${totalVotos}, com a seguinte divisão de votos: \nJoãozinho: ${joaozinho} (${porcentagemJoao.toFixed(1)}%) \nMariazinha: ${mariazinha} (${porcentagemMaria.toFixed(1)}%) \nNulo: ${nulo} (${porcentagemNulo.toFixed(1)}%) \nBranco: ${branco} (${porcentagemBranco.toFixed(1)}%)`)
+    if (nulo > 0) {
+        alert(`${nulo} pessoas votaram Nulo, sendo ${porcentagemNulo.toFixed(1)}% de todos votos`)
+    }
+    if (branco > 0) {
+        alert(`${branco} pessoas votaram Branco, sendo ${porcentagemBranco.toFixed(1)}% de todos votos`)
+    }
+    if(votosPessoas == 0) {
+        alert("A população votou majoritariamente branco ou nulo, portanto as eleições foram anuladas")
+    } else if (joaozinho < mariazinha) {
+        alert("O candidato vencedor foi: Mariazinha")
+    } else if (joaozinho > mariazinha) {
+        alert("O candidato vencedor foi: Joaozinho")
+    } else {
+        alert("Empate")
+    }
     //SAÍDA
 
 </script>

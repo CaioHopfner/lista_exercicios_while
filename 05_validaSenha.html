@@ -6,10 +6,15 @@
     */
 
     //ENTRADA
-
+    const senhaVerdade = prompt("Insira uma senha de 4 numeros")
+    let senhaPergunta = prompt("Qual é a senha de 4 numeros inteiros?")
 
     //PROCESSAMENTO
-
+    while(senhaPergunta != senhaVerdade) {
+        alert("Senha Incorreta")
+        senhaPergunta = prompt("Qual é a senha de 4 numeros inteiros?")
+    }
+    alert("Senha Correta")
 
     //SAÍDA
 

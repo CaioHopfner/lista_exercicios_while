@@ -11,9 +11,29 @@
     */
 
     //ENTRADA
+    let nome = prompt("Qual é o seu nome?")
+    let idade = prompt("Qual é a sua idade?")
+    let salario = Number(prompt("Qual que é o seu salario?"))
+    let genero = prompt("Qual que é o seu genero? F - Feminino M - Masculino").toUpperCase()
+    let estadoCivil = prompt("Qual que é o seu estado civil? S - Solteiro(a) C - Casado(a) V - Viuvo(a) D - Divorciado(a)").toUpperCase()
 
 
     //PROCESSAMENTO
+    while(nome.length < 3) {
+        nome = prompt("O nome inserido tem menos de 3 letras e não é valido. \nInsira um nome valido")
+    }
+    while(idade < 0 || idade > 150) {
+        idade = prompt("Você insiriu uma idade invalida \nInsira uma idade valida.")
+    }
+    while(salario < 0) {
+        salario = prompt("Você insiriu um salario invalido. \nInsira um salario valido")
+    } 
+    while(genero != "F" && genero != "M") {
+        genero = prompt("Você insiriu um genero não valido, insira F ou M").toUpperCase()
+    }
+    while(estadoCivil != "S" && estadoCivil != "C" && estadoCivil != "V" && estadoCivil != "D") {
+        estadoCivil = prompt("Insira um estado civil valido, D, S, C ou V").toUpperCase()
+    }
 
 
     //SAÍDA

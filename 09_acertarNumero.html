@@ -5,11 +5,22 @@
     */
 
     //ENTRADA
+    const min = 1;
+    const max = 30;
+    const numeros = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(numeros)
 
-
+    let guess = Number(prompt("Qual é o número de 1 a 30 que foi escolhido pelo computador?"))
     //PROCESSAMENTO
-
+    while (guess != numeros) {
+        if (guess > numeros) {
+            guess = Number(prompt("Menor! Insira novamente"))
+        } else {
+            guess = Number(prompt("Maior! Insira novamente"))
+        }
+    }
+    alert("Parabens! Você acertou!")
 
     //SAÍDA
-    
+
 </script>

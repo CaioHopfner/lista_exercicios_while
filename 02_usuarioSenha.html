@@ -6,9 +6,13 @@
     */
 
     //ENTRADA
-
+    let nome = prompt("Qual que sera o seu nome de usuário?")
+    let senha = prompt("Qual sera a sua senha?")
 
     //PROCESSAMENTO
+    while(nome.toLowerCase() == senha.toLowerCase()) {
+        senha = prompt(("A sua senha é a mesma que o nome de usuário \nInsira uma nova senha:"))
+    }
 
 
     //SAÍDA
